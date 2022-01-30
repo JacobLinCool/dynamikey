@@ -2,7 +2,7 @@
  * @param path The access path to the target.
  * @param params The parameters that will be passed to the handler.
  */
-export type Handler = (path: string[], params: unknown[]) => unknown;
+export type Handler<T = unknown[], K = unknown> = (path: string[], params: T) => K;
 
 /**
  * The reaction of the handler.
